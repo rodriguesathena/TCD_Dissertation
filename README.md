@@ -1,2 +1,1 @@
-# TCD_Dissertation
-Analysis of Luas light rail performance across COVID-19 phases, focusing on headway regularity, travel time volatility, and journey duration.
+This repository contains the code and supporting materials for my MSc dissertation at Trinity College Dublin. The project analyses operational performance on Dublin’s Luas Red and Green Lines across four COVID-19 phases (Pre-COVID, Lockdown, Recovery, Post-COVID), using GTFS data and custom spatial visualisations. Key metrics include headway regularity, journey time volatility, and average duration. Figures generated from this code appear in the dissertation and its appendices.
