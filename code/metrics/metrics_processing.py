@@ -38,9 +38,9 @@ metrics_output_paths = {
 }
 
 # Figure output folders (relative paths)
-fig_volatility = r"C:\Users\athen\Documents\GitHub\TCD_Dissertation\figures\travel time volatility"
-fig_duration = r"C:\Users\athen\Documents\GitHub\TCD_Dissertation\figures\journey duration"
-fig_headways = r"C:\Users\athen\Documents\GitHub\TCD_Dissertation\figures\headway regularity"
+fig_volatility = r"C:\Users\athen\Documents\GitHub\TCD_Dissertation\figures\travel_time_volatility"
+fig_duration = r"C:\Users\athen\Documents\GitHub\TCD_Dissertation\figures\journey_duration"
+fig_headways = r"C:\Users\athen\Documents\GitHub\TCD_Dissertation\figures\headway_regularity"
 
 lines = ["Red", "Green"]
 directions = ["Inbound", "Outbound"]
