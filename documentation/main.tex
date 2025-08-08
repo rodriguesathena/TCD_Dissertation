@@ -1,44 +1,77 @@
-\documentclass[12pt]{report}
+\documentclass[12pt,hyphens]{report}
 
-% PACKAGES
-\usepackage[utf8]{inputenc}
+% --- PACKAGES ---
+%\usepackage[utf8]{inputenc}
 \usepackage{graphicx}
-\usepackage{geometry}
-\usepackage{float}
 \usepackage{caption}
-\usepackage{subcaption}
-\usepackage{amsmath}
+\usepackage[a4paper, margin=2cm]{geometry}
 \usepackage{setspace}
-\usepackage{natbib}
+\usepackage{titlesec}
+\usepackage[most]{tcolorbox}
+\usepackage{tocloft}
 \usepackage{hyperref}
-\geometry{margin=1in}
+\usepackage{lscape}
+\usepackage{subcaption}
+\usepackage{forest}
+\usepackage{mfirstuc}
+\usepackage{url}
+%\usepackage{subcaption}
+\usepackage{float}
+\usepackage{ifthen}
+\usepackage[backend=biber,style=apa]{biblatex}
+\addbibresource{chapters/references.bib}
+\usepackage{indentfirst} 
+\usepackage[none]{hyphenat}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning}
+\tikzstyle{process} = [rectangle, rounded corners, minimum width=3.5cm, minimum height=1.2cm, text centered, draw=black, fill=gray!10]
+\tikzstyle{arrow} = [thick,->,>=stealth]
 
-% TITLE SETUP
-\title{Reconstructing LUAS Service Reliability from Forecast Data: 2020–2022}
-\author{Your Name}
-\date{July 2025}
+% --- CUSTOM FORMATTING ---
+\setlength{\parindent}{1.5em}  % Paragraph indent
+\setlength{\parskip}{0pt}      % No space between paragraphs
+\onehalfspacing                % Line spacing
+\setlength{\emergencystretch}{2em}
 
-% BEGIN DOCUMENT
+% Remove all default numbering
+\renewcommand{\thesection}{}
+\renewcommand{\thesubsection}{}
+\renewcommand{\thechapter}{}
+
+% Optional: Format unnumbered section titles like chapters (bigger font)
+\titleformat{\section}[block]{\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}[block]{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+% --- DOCUMENT START ---
 \begin{document}
-	
-	\maketitle
-	\tableofcontents
-	\listoffigures
-	\listoftables
-	
-	\doublespacing
-	
-	% CHAPTERS
-	\input{chapters/intro}
-	\input{chapters/litreview}
-	\input{chapters/data}
-	\input{chapters/methodology}
-	\input{chapters/analysis}
-	\input{chapters/discussion}
-	\input{chapters/conclusion}
-	
-	% REFERENCES
-	\bibliographystyle{apalike}
-	\bibliography{references}
-	
+
+% --- FRONT MATTER ---
+\input{chapters/title.tex}
+
+\tableofcontents
+\newpage
+
+% --- MAIN CONTENT (unnumbered sections with manual TOC lines) ---
+\input{chapters/introduction.tex}
+\input{chapters/literature_review.tex}
+\input{chapters/data_processing.tex}
+\input{chapters/methodology.tex}
+\input{chapters/analysis.tex}
+\input{chapters/discussion.tex}
+\input{chapters/conclusion.tex}
+
+% --- APPENDIX ---
+\clearpage
+\input{chapters/appendix.tex}
+
+% --- BIBLIOGRAPHY ---
+\clearpage
+\addcontentsline{toc}{section}{Bibliography}
+\nocite{*}
+\begingroup
+\sloppy
+\printbibliography
+\endgroup
+
+
 \end{document}
