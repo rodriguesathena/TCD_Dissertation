@@ -501,7 +501,7 @@ def plot_volatility(
             ax.axis("off")
 
     #titleand save
-    fig.suptitle(f"Average Travel Time Volatility on the {line.capitalize()} Line", fontsize=18, weight="bold")
+    #fig.suptitle(f"Average Travel Time Volatility on the {line.capitalize()} Line", fontsize=18, weight="bold")
     plt.tight_layout(rect=[0, 0, 1, 0.95])
 
     if save_path:
@@ -631,9 +631,7 @@ def plot_durations(journey_df, by_period=True, save_path=None):
             else:
                 ax.set_ylabel("")
 
-    fig.suptitle(f"Average Journey Duration on the Luas Red and Green Lines\nby Direction and {x_label}",
-        fontsize=16,
-        weight="bold")
+    #fig.suptitle(f"Average Journey Duration on the Luas Red and Green Lines\nby Direction and {x_label}",fontsize=16,weight="bold")
 
     plt.tight_layout(rect=[0, 0, 1, 0.95])
 
@@ -780,7 +778,7 @@ def plot_headways(summary_df, stops_gdf, line, peak_periods=["Morning", "Evening
             ax.set_axis_off()
             ax.set_aspect("equal")
 
-    fig.suptitle(f"Average Peak Period Headways on the {line.title()} Line", fontsize=16, weight="bold")
+    #fig.suptitle(f"Average Peak Period Headways on the {line.title()} Line", fontsize=16, weight="bold")
     plt.tight_layout(rect=[0, 0, 1, 0.95])
 
     if save_path:

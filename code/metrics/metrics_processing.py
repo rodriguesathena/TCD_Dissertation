@@ -68,6 +68,7 @@ for period_name, input_file in period_configs.items():
         for direction in directions:
             fname = f"volatility_{line.lower()}_{direction.lower()}_{period_name}.png"
             fpath = os.path.join(fig_volatility, fname)
+            
             plot_volatility(volatilitydf, stops_gdf, line, [direction], max_annotations=3, save_path=fpath)
 
         fname = f"volatility_allperiods_{line.lower()}_combined_{period_name}.png"
